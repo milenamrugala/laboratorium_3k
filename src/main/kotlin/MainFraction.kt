@@ -5,14 +5,14 @@ fun main() {
     val fourthNumber = Fraction(1,3)
     val fifthNumber = Fraction(2,7)
 
-    val sumOfFractions = firstNumber.sumFractions(secondNumber, fourthNumber, fifthNumber)
-    println(sumOfFractions)
+    val sum = firstNumber.sum(secondNumber, fourthNumber, fifthNumber)
+    println(sum)
 
     // 11/11 = 1;
     // 3/6 = 1/2;
     // 1/3;
     // 2/7; (NWW dla 2, 3, 7 = 42)
-    // 1 + 1/2 + 1/3 + 2/7 = 42/42 + 21/42 + 14/42 + 12/42 = 89/42 = 2 5/42 OK
+    // 1 + 1/2 + 1/3 + 2/7 = 42/42 + 21/42 + 14/42 + 12/42 = 89/42 = 2 5/42 ok
 
     try {
         println(firstNumber) //ok 11/11 = 1     //ok

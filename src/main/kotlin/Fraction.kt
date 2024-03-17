@@ -3,10 +3,9 @@ class Fraction(
     private var denominator: Int
 ) {
 
-    fun sumFractions(vararg fractions: Fraction): Fraction {
+    fun sum(vararg fractions: Fraction): Fraction {
         var sumNumerator = numerator
         var sumDenominator = denominator
-
         for (fraction in fractions) {
             val commonDenominator = sumDenominator * fraction.denominator
             sumNumerator = sumNumerator * fraction.denominator + fraction.numerator * sumDenominator

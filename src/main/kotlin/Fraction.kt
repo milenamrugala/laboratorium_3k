@@ -3,6 +3,18 @@ class Fraction(
     private var denominator: Int
 ) {
 
+    fun sumFractions(vararg fractions: Fraction): Fraction {
+        var sumNumerator = numerator
+        var sumDenominator = denominator
+
+        for (fraction in fractions) {
+            val commonDenominator = sumDenominator * fraction.denominator
+            sumNumerator = sumNumerator * fraction.denominator + fraction.numerator * sumDenominator
+            sumDenominator = commonDenominator
+        }
+        return Fraction(sumNumerator, sumDenominator)
+    }
+
     fun add(other: Fraction): Fraction {
         if (other.denominator == 0) {
             throw ArithmeticException("Impossible addition. Denominator cannot be 0!")
